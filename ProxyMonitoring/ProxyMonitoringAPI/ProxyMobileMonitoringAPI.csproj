@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\Monitoring.Extensions\Monitoring.Extensions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="appsettings.dev.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

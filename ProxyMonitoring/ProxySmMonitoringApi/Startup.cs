@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Common;
 
-namespace ProxyMonitoringAPI
+namespace ProxySmMonitoringAPI
 {
     public class Startup
     {
