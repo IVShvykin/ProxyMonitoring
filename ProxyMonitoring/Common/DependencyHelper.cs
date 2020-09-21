@@ -12,7 +12,7 @@ namespace Common
 {
     public static class DependencyHelper
     {
-        public static void RegisterCommonBase(this IServiceCollection serviceCollection) 
+        public static void AddCommonBase(this IServiceCollection serviceCollection) 
         {
             serviceCollection.AddSingleton<IConnection, Connection>();
             serviceCollection.AddScoped<IKcmEcmDapper, KcmEcmDapper>();
@@ -21,7 +21,7 @@ namespace Common
             serviceCollection.AddScoped<IProxyMonitoringRepository, ProxyMonitoringRepository>();
         }
 
-        public static void RegisterCommonMapping(this IServiceCollection serviceCollection)
+        public static void AddCommonMapping(this IServiceCollection serviceCollection)
         {
             var mapperConfig = new MapperConfiguration(cfg =>
             {

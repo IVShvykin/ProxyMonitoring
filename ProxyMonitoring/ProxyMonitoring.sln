@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProxyMonitoringAPI", "ProxyMonitoringAPI\ProxyMonitoringAPI.csproj", "{0252591E-AD82-4FAA-AC16-C09C99474548}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProxyMobileMonitoringAPI", "ProxyMonitoringAPI\ProxyMobileMonitoringAPI.csproj", "{0252591E-AD82-4FAA-AC16-C09C99474548}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{8732111B-4E9E-4E0F-8065-CDF71D954CD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxySmMonitoringApi", "ProxySmMonitoringApi\ProxySmMonitoringApi.csproj", "{01F48EF1-5666-4A8C-9B7E-9CE73489546F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8732111B-4E9E-4E0F-8065-CDF71D954CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8732111B-4E9E-4E0F-8065-CDF71D954CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8732111B-4E9E-4E0F-8065-CDF71D954CD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01F48EF1-5666-4A8C-9B7E-9CE73489546F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01F48EF1-5666-4A8C-9B7E-9CE73489546F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01F48EF1-5666-4A8C-9B7E-9CE73489546F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01F48EF1-5666-4A8C-9B7E-9CE73489546F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
