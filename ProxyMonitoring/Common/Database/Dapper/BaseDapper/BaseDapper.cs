@@ -1,9 +1,9 @@
 ﻿using Common.Database.Connection;
 using System.Data.SqlClient;
 
-namespace Common.Database.BaseDapper
+namespace Common.Database.Dapper.BaseDapper
 {
-    public class BaseDapper
+    public class BaseDapper : IBaseDapper
     {
         protected readonly IConnection _connection;
         public SqlConnection DapperSqlConnection { get; }

@@ -1,6 +1,6 @@
 ﻿using Common.Database.Connection;
 
-namespace Common.Database.KcmEcmDapper
+namespace Common.Database.Dapper.KcmEcmDapper
 {
     public class KcmEcmDapper : BaseDapper.BaseDapper, IKcmEcmDapper
     {

@@ -1,6 +1,6 @@
 ﻿using Common.Database.Connection;
 
-namespace Common.Database.ProxyMonitoringDapper
+namespace Common.Database.Dapper.ProxyMonitoringDapper
 {
     public class ProxyMonitoringDapper : BaseDapper.BaseDapper, IProxyMonitoringDapper
     {
