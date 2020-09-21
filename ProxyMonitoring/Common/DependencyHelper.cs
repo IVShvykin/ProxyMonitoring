@@ -1,9 +1,12 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System;
+using AutoMapper;
+using Microsoft.Extensions.DependencyInjection;
 using Common.Database.Connection;
 using Common.Database.Dapper.KcmEcmDapper;
 using Common.Database.Dapper.ProxyMonitoringDapper;
 using Common.Database.Repositories.KcmEcmRepository;
 using Common.Database.Repositories.ProxyMonitoringRepository;
+
 
 namespace Common
 {
@@ -16,6 +19,16 @@ namespace Common
             serviceCollection.AddScoped<IProxyMonitoringDapper, ProxyMonitoringDapper>();
             serviceCollection.AddScoped<IKcmEcmRepository, KcmEcmRepository>();
             serviceCollection.AddScoped<IProxyMonitoringRepository, ProxyMonitoringRepository>();
+        }
+
+        public static void RegisterCommonMapping(this IServiceCollection serviceCollection)
+        {
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<AutoMapperProfile>();
+            });
+            mapperConfig.AssertConfigurationIsValid();
+            serviceCollection.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
     }
 }
