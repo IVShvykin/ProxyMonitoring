@@ -1,6 +1,6 @@
-﻿namespace Common.Models.VmModels
+﻿namespace Common.Dto.ViewModels
 {
-    public class PageRequestBaseModel
+    public class VmPageRequestBaseModel
     {
         public int Limit { get; set; }
         public int Page { get; set; }

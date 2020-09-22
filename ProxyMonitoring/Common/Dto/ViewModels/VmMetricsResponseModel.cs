@@ -1,8 +1,8 @@
-﻿using Common.Models.BlModels;
+﻿using Common.Dto.BlModels;
 
-namespace Common.Models.VmModels
+namespace Common.Dto.ViewModels
 {
-    public class MetricsResModel
+    public class VmMetricsResModel
     {
         public long Id { get; set; }
         public string Name { get; set; }
@@ -10,7 +10,7 @@ namespace Common.Models.VmModels
         public string Value { get; set; }
         public long Delta { get; set; }
         public double DeltaPercent { get; set; }
-        public MetricsStatus DeltaStatus { get; set; }
+        public BlMetricsStatus DeltaStatus { get; set; }
         public double TotalPercent { get; set; }
     }
 }

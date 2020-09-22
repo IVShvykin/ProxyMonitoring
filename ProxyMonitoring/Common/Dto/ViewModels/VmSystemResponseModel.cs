@@ -1,6 +1,6 @@
-﻿namespace Common.Models.VmModels
+﻿namespace Common.Dto.ViewModels
 {
-    public class SystemResponseModel
+    public class VmSystemResponseModel
     {
         public string Id { get; set; }
         public string Name { get; set; }
