@@ -1,4 +1,4 @@
-﻿namespace Common.Dto.BlModels
+﻿namespace Common.Dto.ViewModels
 {
     public class BLWorker
     {

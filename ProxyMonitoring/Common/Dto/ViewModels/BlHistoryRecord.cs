@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Common.Dto.BlModels
+namespace Common.Dto.ViewModels
 {
     public class BlHistoryRecord
     {

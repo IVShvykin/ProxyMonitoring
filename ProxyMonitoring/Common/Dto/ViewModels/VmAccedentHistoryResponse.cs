@@ -1,6 +1,4 @@
-﻿using Common.Dto.BlModels;
-
-namespace Common.Dto.ViewModels
+﻿namespace Common.Dto.ViewModels
 {
     public class VmAccedentHistoryResponse
     {

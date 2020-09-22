@@ -1,4 +1,4 @@
-﻿using Common.Dto.BlModels;
+﻿using Common.Dto.Enums;
 using System;
 
 namespace Common.Dto.ViewModels

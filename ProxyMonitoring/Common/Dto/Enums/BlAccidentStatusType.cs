@@ -1,4 +1,4 @@
-﻿namespace Common.Dto.BlModels
+﻿namespace Common.Dto.Enums
 {
     public enum BlAccidentStatusType
     {

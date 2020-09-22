@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Common.Dto.Enums;
+using System;
 
-namespace Common.Dto.BlModels
+namespace Common.Dto.ViewModels
 {
     public class BLMetricPoint
     {
