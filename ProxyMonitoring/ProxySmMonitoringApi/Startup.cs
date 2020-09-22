@@ -31,7 +31,7 @@ namespace ProxySmMonitoringAPI
         {
             services.AddControllers();
             services.AddCommonBase();
-            services.AddCommonMapping();
+            services.AddMapping();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
