@@ -12,6 +12,7 @@ namespace ProxyMobileMonitoringAPI.Controllers
     [Route("api/v{version:apiVersion}/[controller]")]
     public class SystemsController : ControllerBase
     {
+        [HttpGet]
         public async Task<VmSystemResponse[]> Get([FromQuery] VmSystemsRequest vmSystemsRequest)
         {
             return vmMock.vmSystemResponse;

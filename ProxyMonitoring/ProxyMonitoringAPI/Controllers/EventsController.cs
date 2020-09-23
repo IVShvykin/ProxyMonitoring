@@ -12,6 +12,7 @@ namespace ProxyMobileMonitoringAPI.Controllers
     [Route("api/v{version:apiVersion}/[controller]")]
     public class EventsController : ControllerBase
     {
+        [HttpGet]
         public async Task<VmEventResponse[]> Get([FromQuery] VmEventRequest vmEventRequest)
         {
             return VmMock.vmEventResponse;
