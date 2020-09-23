@@ -22,16 +22,16 @@ namespace Common.Mock.VmMock
                         }
             };
 
-        public static readonly VmAccidentEventResponse[] vmAccidentEventResponse =
-            new VmAccidentEventResponse[]
+        public static readonly VmEventResponse[] vmEventResponse =
+            new VmEventResponse[]
             {
-                new VmAccidentEventResponse()
+                new VmEventResponse()
                 {
                     Id = "1", // Идентификатор аварии
                     Date = new DateTime(2020, 6, 26),// Дата аварии
                     Type = BlWorkType.accident, //Тип аварии
                 },
-                new VmAccidentEventResponse()
+                new VmEventResponse()
                 {
                     Id = "2", // Идентификатор аварии
                     Date = new DateTime(2020, 7, 20),// Дата аварии

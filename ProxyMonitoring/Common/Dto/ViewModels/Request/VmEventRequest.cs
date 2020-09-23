@@ -3,7 +3,7 @@ using System;
 
 namespace Common.Dto.ViewModels.Request
 {
-    public class VmGetEventsRequest
+    public class VmEventRequest
     {
         public DateTime StartDate { get; set; }
         public DateTime FinishDate { get; set; }
