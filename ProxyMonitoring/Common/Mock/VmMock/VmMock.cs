@@ -7,7 +7,7 @@ namespace Common.Mock.VmMock
 {
     public static class VmMock
     {
-        public static readonly VmAccidentDescriptionResponse[] vmAccidentDescriptionResponseModel =
+        public static readonly VmAccidentDescriptionResponse[] vmAccidentDescriptionResponse =
             new VmAccidentDescriptionResponse[]
             {
                         new VmAccidentDescriptionResponse()
@@ -22,7 +22,7 @@ namespace Common.Mock.VmMock
                         }
             };
 
-        public static readonly VmAccidentEventResponse[] vmAccidentEventResponseModel =
+        public static readonly VmAccidentEventResponse[] vmAccidentEventResponse =
             new VmAccidentEventResponse[]
             {
                 new VmAccidentEventResponse()
@@ -39,7 +39,7 @@ namespace Common.Mock.VmMock
                 }
             };
 
-        public static readonly VmAccidentHistoryResponse vMAccedentHistoryResponse =
+        public static readonly VmAccidentHistoryResponse vmAccidentHistoryResponse =
             new VmAccidentHistoryResponse()
             {
                 CompletedHistory = new VmHistoryRecord[]
@@ -62,7 +62,7 @@ namespace Common.Mock.VmMock
                 },
             };
 
-        public static readonly VmAccidentInfoResponse vmAccedentInfoResponse =
+        public static readonly VmAccidentInfoResponse vmAccidentInfoResponse =
             new VmAccidentInfoResponse()
             {
                 Id = "1",
@@ -100,7 +100,7 @@ namespace Common.Mock.VmMock
                 }
             };
 
-        public static readonly VmAccidentWorkersResponse vmAccedentWorkersResponseModels =
+        public static readonly VmAccidentWorkersResponse vmAccidentWorkersResponse =
             new VmAccidentWorkersResponse
             {
                 Manager = new VmManager()
@@ -197,7 +197,8 @@ namespace Common.Mock.VmMock
                     Count = 5
                 },
             };
-        public static readonly VmSystemResponse[] vmSystemResponses =
+
+        public static readonly VmSystemResponse[] vmSystemResponse =
             new VmSystemResponse[]
             {
                 new VmSystemResponse()
