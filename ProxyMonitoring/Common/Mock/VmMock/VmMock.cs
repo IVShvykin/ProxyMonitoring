@@ -217,8 +217,8 @@ namespace Common.Mock.VmMock
                 },
             };
 
-        public static readonly string[] affectedSystems = new string []
-        {          
+        public static readonly string[] affectedSystems = new string[]
+        {
             "Платежи", // Название затронутой системы
             "Переводы",
             "Интернет банк",
