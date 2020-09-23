@@ -3,7 +3,7 @@ using System;
 
 namespace Common.Dto.ViewModels.Response
 {
-    public class VmAccedentsResponse
+    public class VmAccidentResponse
     {
         public string Id { get; set; }
         public string Name { get; set; }

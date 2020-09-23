@@ -7,15 +7,47 @@ namespace Common.Mock.VmMock
 {
     public static class VmMock
     {
-        public static readonly VmAccedentHistoryResponse vMAccedentHistoryResponse =
-            new VmAccedentHistoryResponse()
+        public static readonly VmAccidentDescriptionResponse[] vmAccidentDescriptionResponseModel =
+            new VmAccidentDescriptionResponse[]
+            {
+                        new VmAccidentDescriptionResponse()
+                        {
+                            Name = "Для сотрудников",
+                            Value = "Выявлена недоступность АБС М-Банк, инстанс main. Последствия — в ВТБ Онлайн профиль клиентов, имеющих продукты экс-БМ собираются из кэш. Во время сбоя в ВТБ-онлайн было невозможно проведение операций по части ранее выпущенных карт (только бывшего Банка Москвы)." // Текст описания *
+                        },
+                        new VmAccidentDescriptionResponse()
+                        {
+                            Name = "Для СМИ",
+                            Value = "Ранее зафиксированные проблемы в ВТБ-Онлайн полностью устранены, работа мобильного приложения восстановлена.\nРанее в системе наблюдался кратковременный технический сбой, в ходе которого в адрес клиентов произошла выгрузка ошибочных СМС о ранее проведённых архивных транзакциях, однако никаких списаний денежных средств не производилось.\nПриносим свои извинения за неудобства, наши IT специалисты делают все возможное для усовершенствования онлайн-сервисов."
+                        }
+            };
+
+        public static readonly VmAccidentEventResponse[] vmAccidentEventResponseModel =
+            new VmAccidentEventResponse[]
+            {
+                new VmAccidentEventResponse()
+                {
+                    Id = "1", // Идентификатор аварии
+                    Date = new DateTime(2020, 6, 26),// Дата аварии
+                    Type = BlWorkType.accident, //Тип аварии
+                },
+                new VmAccidentEventResponse()
+                {
+                    Id = "2", // Идентификатор аварии
+                    Date = new DateTime(2020, 7, 20),// Дата аварии
+                    Type = BlWorkType.plan, //Тип аварии
+                }
+            };
+
+        public static readonly VmAccidentHistoryResponse vMAccedentHistoryResponse =
+            new VmAccidentHistoryResponse()
             {
                 CompletedHistory = new VmHistoryRecord[] { new VmHistoryRecord() { Name = "Соколов А. А.", FinishDate = new DateTime(2020, 6, 26), Description = "Описание работы" } },
                 PlanHistory = new VmHistoryRecord[] { new VmHistoryRecord() { Name = "Иванов И. И.", FinishDate = new DateTime(2020, 7, 15), Description = "Описание другой работы" } },
             };
 
-        public static readonly VmAccedentInfoResponse vmAccedentInfoResponse =
-            new VmAccedentInfoResponse()
+        public static readonly VmAccidentInfoResponse vmAccedentInfoResponse =
+            new VmAccidentInfoResponse()
             {
                 Id = "1",
                 Name = "Авария IM-216836", // Имя аварии *
@@ -35,10 +67,10 @@ namespace Common.Mock.VmMock
                 TelegramLink = "https://t.me/vtb" // Ссылка на Telegram-чат *
             };
 
-        public static readonly VmAccedentsResponse[] vmAccedentsResponse =
-            new VmAccedentsResponse[]
+        public static readonly VmAccidentResponse[] vmAccedentsResponse =
+            new VmAccidentResponse[]
             {
-                new VmAccedentsResponse()
+                new VmAccidentResponse()
                 {
                     Id = "1", // Идентификатор аварии *
                     Name = "Авария IM-216836", // Имя аварии *
@@ -52,8 +84,8 @@ namespace Common.Mock.VmMock
                 }
             };
 
-        public static readonly VmAccedentWorkersResponse vmAccedentWorkersResponseModels =
-            new VmAccedentWorkersResponse
+        public static readonly VmAccidentWorkersResponse vmAccedentWorkersResponseModels =
+            new VmAccidentWorkersResponse
             {
                 Manager = new VmManager()
                 {
@@ -84,36 +116,87 @@ namespace Common.Mock.VmMock
                 }
             };
 
-        public static readonly VmAccidentDescriptionResponse[] vmAccidentDescriptionResponseModel =
-            new VmAccidentDescriptionResponse[]
+        public static readonly VmMetricsResponse[] vmMetricsResponse = new
+            VmMetricsResponse[]
             {
-                new VmAccidentDescriptionResponse()
+                new VmMetricsResponse()
                 {
-                    Name = "Для сотрудников",
-                    Value = "Выявлена недоступность АБС М-Банк, инстанс main. Последствия — в ВТБ Онлайн профиль клиентов, имеющих продукты экс-БМ собираются из кэш. Во время сбоя в ВТБ-онлайн было невозможно проведение операций по части ранее выпущенных карт (только бывшего Банка Москвы)." // Текст описания *
+                    Id="1",
+                    Name = "Клиентов в ВТБ Онлайн", // Имя метрики *
+                    Mine = true,
+                    Value = "65024",
+                    Delta = -56,
+                    DeltaPercent = -0.6,
+                    DeltaStatus = BlMetricsStatus.warning,
+                    TotalPercent = 0.6
                 },
-                new VmAccidentDescriptionResponse()
+                new VmMetricsResponse()
                 {
-                    Name = "Для СМИ",
-                    Value = "Ранее зафиксированные проблемы в ВТБ-Онлайн полностью устранены, работа мобильного приложения восстановлена.\nРанее в системе наблюдался кратковременный технический сбой, в ходе которого в адрес клиентов произошла выгрузка ошибочных СМС о ранее проведённых архивных транзакциях, однако никаких списаний денежных средств не производилось.\nПриносим свои извинения за неудобства, наши IT специалисты делают все возможное для усовершенствования онлайн-сервисов."
+                    Id = "2",
+                    Name = "Очередь на исполнение документов БО",
+                    Mine = true,
+                    Value = "0",
+                    Delta = -5,
+                    DeltaPercent = -0.3,
+                    DeltaStatus = BlMetricsStatus.normal,
+                    TotalPercent = 0
+                },
+                new VmMetricsResponse()
+                {
+                    Id="3",
+                    Name = "Количество новых операций в ВТБ-онлайн", // Имя метрики *
+                    Mine = true,
+                    Value = "0",
+                    Delta = 50,
+                    DeltaPercent = -0.6,
+                    DeltaStatus = BlMetricsStatus.normal,
+                    TotalPercent = 0.6
+                },                new VmMetricsResponse()
+                {
+                    Id="4",
+                    Name = "Время формирования выписки", // Имя метрики *
+                    Mine = true,
+                    Value = "2.9с",
+                    Delta = -56,
+                    DeltaPercent = -0.6,
+                    DeltaStatus = BlMetricsStatus.warning,
+                    TotalPercent = 0.6
                 }
             };
 
-        public static readonly VmAccidentEventResponse[] vmAccidentEventResponseModel =
-            new VmAccidentEventResponse[]
+        public static readonly VmPlanTypeResponse[] vmPlanTypeResponse =
+            new VmPlanTypeResponse[]
             {
-                new VmAccidentEventResponse()
+                new VmPlanTypeResponse()
                 {
-                    Id = "1", // Идентификатор аварии
-                    Date = new DateTime(2020, 6, 26),// Дата аварии
-                    Type = BlWorkType.accident, //Тип аварии
+                    Id = "1",
+                    Name = "Экстренные",
+                    Count = 1
                 },
-                new VmAccidentEventResponse()
+                new VmPlanTypeResponse()
                 {
-                    Id = "2", // Идентификатор аварии
-                    Date = new DateTime(2020, 7, 20),// Дата аварии
-                    Type = BlWorkType.plan, //Тип аварии
-                }
+                    Id = "2",
+                    Name = "Плановые",
+                    Count = 5
+                },
+            };
+        public static readonly VmSystemResponse[] vmSystemResponses =
+            new VmSystemResponse[]
+            {
+                new VmSystemResponse()
+                {
+                    Id = "1",
+                    Name ="Бизнес операции", // Название системы *б
+                    Mine = true,
+                    CriticalAccidents = 1,
+                    MajorAccedents = 3,
+                    MinorAccedents = 10,
+                },
+                new VmSystemResponse()
+                { 
+                    Id = "2",
+                    Name = "Внутренние сервисы",
+                },
             };
     }
 }
