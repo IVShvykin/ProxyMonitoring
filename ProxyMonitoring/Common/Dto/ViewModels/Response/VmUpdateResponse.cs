@@ -1,6 +1,6 @@
 ﻿namespace Common.Dto.ViewModels.Response
 {
-    public class VmUpdateResult
+    public class VmUpdateResponse
     {
         public string Result { get; set; }
     }
