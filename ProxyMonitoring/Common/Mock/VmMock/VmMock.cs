@@ -181,16 +181,16 @@ namespace Common.Mock.VmMock
                 }
             };
 
-        public static readonly VmPlanTypeResponse[] vmPlanTypeResponse =
-            new VmPlanTypeResponse[]
+        public static readonly VmPlanSectionsResponse[] vmPlanSectionsResponse =
+            new VmPlanSectionsResponse[]
             {
-                new VmPlanTypeResponse()
+                new VmPlanSectionsResponse()
                 {
                     Id = "1",
                     Name = "Экстренные",
                     Count = 1
                 },
-                new VmPlanTypeResponse()
+                new VmPlanSectionsResponse()
                 {
                     Id = "2",
                     Name = "Плановые",

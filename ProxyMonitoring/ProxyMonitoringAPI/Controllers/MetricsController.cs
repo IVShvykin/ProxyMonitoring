@@ -6,7 +6,6 @@ using vmMock = Common.Mock.VmMock.VmMock;
 
 namespace ProxyMobileMonitoringAPI.Controllers
 {
-    
     [ApiController]
     [ApiVersion("1.0")]
     [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
