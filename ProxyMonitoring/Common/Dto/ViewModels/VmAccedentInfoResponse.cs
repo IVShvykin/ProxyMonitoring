@@ -1,5 +1,5 @@
-﻿using Common.Dto.Enums;
-using System;
+﻿using System;
+using Common.Dto.Enums;
 
 namespace Common.Dto.ViewModels
 {
@@ -18,5 +18,8 @@ namespace Common.Dto.ViewModels
         public DateTime DetectionDate { get; set; }
         public string ConferenceLink { get; set; }
         public string TelegramLink { get; set; }
+        public string FailurePoint { get; set; }
+        public string ConfigurationUnit { get; set; }
+        public DateTime PredictDate { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 {
     public class VmAccedentHistoryResponse
     {
-        public BlHistoryRecord[] CompletedHistory { get; set; }
-        public BlHistoryRecord[] PlanHistory { get; set; }
+        public VmHistoryRecord[] CompletedHistory { get; set; }
+        public VmHistoryRecord[] PlanHistory { get; set; }
     }
 }

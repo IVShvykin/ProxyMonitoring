@@ -1,6 +1,6 @@
 ﻿namespace Common.Dto.ViewModels
 {
-    public class BLWorker
+    public class VmWorker
     {
         public string Name { get; set; }
         public string Avatar { get; set; }

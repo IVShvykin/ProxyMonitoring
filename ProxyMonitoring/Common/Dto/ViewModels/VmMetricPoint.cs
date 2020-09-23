@@ -3,7 +3,7 @@ using System;
 
 namespace Common.Dto.ViewModels
 {
-    public class BLMetricPoint
+    public class VmMetricPoint
     {
         public long Value { get; set; }
         public long Delta { get; set; }

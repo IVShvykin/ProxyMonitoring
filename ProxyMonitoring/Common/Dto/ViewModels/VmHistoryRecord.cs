@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Common.Dto.ViewModels
 {
-    public class BlHistoryRecord
+    public class VmHistoryRecord
     {
         public string Name { get; set; }
         public DateTime FinishDate { get; set; }
