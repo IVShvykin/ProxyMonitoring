@@ -14,7 +14,6 @@ namespace ProxyMonitoringAPI
         {
             Configuration = configuration;
             _env = env;
-            _env = env;
 
             Configuration = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
@@ -41,6 +40,15 @@ namespace ProxyMonitoringAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1");
+                c.RoutePrefix = string.Empty;
+            });
+
 
             app.UseHttpsRedirection();
 
