@@ -1,7 +1,7 @@
 ﻿using System;
 using Common.Dto.Enums;
 
-namespace Common.Dto.ViewModels
+namespace Common.Dto.ViewModels.Response
 {
     public class VmAccedentInfoResponse
     {

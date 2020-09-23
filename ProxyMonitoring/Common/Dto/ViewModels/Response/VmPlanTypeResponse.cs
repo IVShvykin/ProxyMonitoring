@@ -1,6 +1,6 @@
-﻿namespace Common.Dto.ViewModels
+﻿namespace Common.Dto.ViewModels.Response
 {
-    public class VmPlanTypeResponseModel
+    public class VmPlanTypeResponse
     {
         public string Id { get; set; }
         public string Name { get; set; }

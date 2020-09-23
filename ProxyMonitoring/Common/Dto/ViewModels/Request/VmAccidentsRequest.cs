@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Common.Dto.ViewModels
+namespace Common.Dto.ViewModels.Request
 {
-    public class VmAccidentsRequestModel : VmPageRequestBaseModel
+    public class VmAccidentsRequest : VmPageRequestBasel
     {
         public DateTime? StartDate { get; set; }
         public string[] AffectedSystems { get; set; }

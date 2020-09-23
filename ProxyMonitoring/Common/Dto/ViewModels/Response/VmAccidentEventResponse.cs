@@ -1,9 +1,9 @@
 ﻿using Common.Dto.Enums;
 using System;
 
-namespace Common.Dto.ViewModels
+namespace Common.Dto.ViewModels.Response
 {
-    public class VmAccidentEventResponseModel
+    public class VmAccidentEventResponse
     {
         public string Id { get; set; }
         public DateTime Date { get; set; }

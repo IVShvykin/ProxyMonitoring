@@ -1,7 +1,7 @@
 ﻿using Common.Dto.Enums;
 using System;
 
-namespace Common.Dto.ViewModels
+namespace Common.Dto.ViewModels.SubModels
 {
     public class VmMetricPoint
     {

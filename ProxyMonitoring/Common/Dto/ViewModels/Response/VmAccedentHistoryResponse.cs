@@ -1,4 +1,6 @@
-﻿namespace Common.Dto.ViewModels
+﻿using Common.Dto.ViewModels.SubModels;
+
+namespace Common.Dto.ViewModels.Response
 {
     public class VmAccedentHistoryResponse
     {

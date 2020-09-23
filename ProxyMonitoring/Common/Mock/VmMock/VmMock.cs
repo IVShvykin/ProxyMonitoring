@@ -1,5 +1,6 @@
 ﻿using System;
-using Common.Dto.ViewModels;
+using Common.Dto.ViewModels.Response;
+using Common.Dto.ViewModels.SubModels;
 using Common.Dto.Enums;
 
 namespace Common.Mock.VmMock
@@ -34,10 +35,10 @@ namespace Common.Mock.VmMock
                 TelegramLink = "https://t.me/vtb" // Ссылка на Telegram-чат *
             };
 
-        public static readonly VmAccedentsResponseModel[] vmAccedentsResponseModel =
-            new VmAccedentsResponseModel[]
+        public static readonly VmAccedentsResponse[] vmAccedentsResponse =
+            new VmAccedentsResponse[]
             {
-                new VmAccedentsResponseModel()
+                new VmAccedentsResponse()
                 {
                     Id = "1", // Идентификатор аварии *
                     Name = "Авария IM-216836", // Имя аварии *
@@ -51,8 +52,8 @@ namespace Common.Mock.VmMock
                 }
             };
 
-        public static readonly VmAccedentWorkersResponseModel vmAccedentWorkersResponseModels =
-            new VmAccedentWorkersResponseModel
+        public static readonly VmAccedentWorkersResponse vmAccedentWorkersResponseModels =
+            new VmAccedentWorkersResponse
             {
                 Manager = new VmManager()
                 {
@@ -83,31 +84,31 @@ namespace Common.Mock.VmMock
                 }
             };
 
-        public static readonly VmAccidentDescriptionResponseModel[] vmAccidentDescriptionResponseModel =
-            new VmAccidentDescriptionResponseModel[]
+        public static readonly VmAccidentDescriptionResponse[] vmAccidentDescriptionResponseModel =
+            new VmAccidentDescriptionResponse[]
             {
-                new VmAccidentDescriptionResponseModel()
+                new VmAccidentDescriptionResponse()
                 {
                     Name = "Для сотрудников",
                     Value = "Выявлена недоступность АБС М-Банк, инстанс main. Последствия — в ВТБ Онлайн профиль клиентов, имеющих продукты экс-БМ собираются из кэш. Во время сбоя в ВТБ-онлайн было невозможно проведение операций по части ранее выпущенных карт (только бывшего Банка Москвы)." // Текст описания *
                 },
-                new VmAccidentDescriptionResponseModel()
+                new VmAccidentDescriptionResponse()
                 {
                     Name = "Для СМИ",
                     Value = "Ранее зафиксированные проблемы в ВТБ-Онлайн полностью устранены, работа мобильного приложения восстановлена.\nРанее в системе наблюдался кратковременный технический сбой, в ходе которого в адрес клиентов произошла выгрузка ошибочных СМС о ранее проведённых архивных транзакциях, однако никаких списаний денежных средств не производилось.\nПриносим свои извинения за неудобства, наши IT специалисты делают все возможное для усовершенствования онлайн-сервисов."
                 }
             };
 
-        public static readonly VmAccidentEventResponseModel[] vmAccidentEventResponseModel =
-            new VmAccidentEventResponseModel[]
+        public static readonly VmAccidentEventResponse[] vmAccidentEventResponseModel =
+            new VmAccidentEventResponse[]
             {
-                new VmAccidentEventResponseModel()
+                new VmAccidentEventResponse()
                 {
                     Id = "1", // Идентификатор аварии
                     Date = new DateTime(2020, 6, 26),// Дата аварии
                     Type = BlWorkType.accident, //Тип аварии
                 },
-                new VmAccidentEventResponseModel()
+                new VmAccidentEventResponse()
                 {
                     Id = "2", // Идентификатор аварии
                     Date = new DateTime(2020, 7, 20),// Дата аварии

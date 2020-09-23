@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Common.Dto.ViewModels
+namespace Common.Dto.ViewModels.Request
 {
-    public class VmMetricInfoRequestModel
+    public class VmMetricInfoRequest
     {
         public string Id { get; set; }
         public DateTime StartDate { get; set; }

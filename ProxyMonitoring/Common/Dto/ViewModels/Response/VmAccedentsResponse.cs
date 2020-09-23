@@ -1,9 +1,9 @@
 ﻿using Common.Dto.Enums;
 using System;
 
-namespace Common.Dto.ViewModels
+namespace Common.Dto.ViewModels.Response
 {
-    public class VmAccedentsResponseModel
+    public class VmAccedentsResponse
     {
         public string Id { get; set; }
         public string Name { get; set; }

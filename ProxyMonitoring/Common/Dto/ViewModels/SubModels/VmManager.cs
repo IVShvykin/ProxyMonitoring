@@ -1,4 +1,4 @@
-﻿namespace Common.Dto.ViewModels
+﻿namespace Common.Dto.ViewModels.SubModels
 {
     public class VmManager
     {

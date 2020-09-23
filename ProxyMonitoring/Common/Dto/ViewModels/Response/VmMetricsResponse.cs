@@ -1,8 +1,8 @@
 ﻿using Common.Dto.Enums;
 
-namespace Common.Dto.ViewModels
+namespace Common.Dto.ViewModels.Response
 {
-    public class VmMetricsResModel
+    public class VmMetricsResponse
     {
         public long Id { get; set; }
         public string Name { get; set; }
