@@ -42,8 +42,24 @@ namespace Common.Mock.VmMock
         public static readonly VmAccidentHistoryResponse vMAccedentHistoryResponse =
             new VmAccidentHistoryResponse()
             {
-                CompletedHistory = new VmHistoryRecord[] { new VmHistoryRecord() { Name = "Соколов А. А.", FinishDate = new DateTime(2020, 6, 26), Description = "Описание работы" } },
-                PlanHistory = new VmHistoryRecord[] { new VmHistoryRecord() { Name = "Иванов И. И.", FinishDate = new DateTime(2020, 7, 15), Description = "Описание другой работы" } },
+                CompletedHistory = new VmHistoryRecord[]
+                {
+                    new VmHistoryRecord()
+                    {
+                        Name = "Соколов А. А.",
+                        FinishDate = new DateTime(2020, 6, 26),
+                        Description = "Описание работы"
+                    }
+                },
+                PlanHistory = new VmHistoryRecord[]
+                {
+                    new VmHistoryRecord()
+                    {
+                        Name = "Иванов И. И.",
+                        FinishDate = new DateTime(2020, 7, 15),
+                        Description = "Описание другой работы"
+                    }
+                },
             };
 
         public static readonly VmAccidentInfoResponse vmAccedentInfoResponse =
@@ -67,7 +83,7 @@ namespace Common.Mock.VmMock
                 TelegramLink = "https://t.me/vtb" // Ссылка на Telegram-чат *
             };
 
-        public static readonly VmAccidentResponse[] vmAccedentsResponse =
+        public static readonly VmAccidentResponse[] vmAccidentResponse =
             new VmAccidentResponse[]
             {
                 new VmAccidentResponse()
@@ -151,7 +167,8 @@ namespace Common.Mock.VmMock
                     DeltaPercent = -0.6,
                     DeltaStatus = BlMetricsStatus.normal,
                     TotalPercent = 0.6
-                },                new VmMetricsResponse()
+                },
+                new VmMetricsResponse()
                 {
                     Id="4",
                     Name = "Время формирования выписки", // Имя метрики *
@@ -193,10 +210,52 @@ namespace Common.Mock.VmMock
                     MinorAccedents = 10,
                 },
                 new VmSystemResponse()
-                { 
+                {
                     Id = "2",
                     Name = "Внутренние сервисы",
                 },
+            };
+
+        public static readonly string[] affectedSystems = new string []
+        {          
+            "Платежи", // Название затронутой системы
+            "Переводы",
+            "Интернет банк",
+            "Мобильный банк",
+            "Вклады"
+        };
+
+        public static readonly string[] failurePoints = new string[]
+        {
+            "Profile", // Название точки сбоя
+            "УСБС – бэк",
+            "Сервисы Мультикарта",
+            "Каналы связи",
+            "Golden Gate",
+            "Service Manager"
+        };
+
+        public static readonly VmUpdateResult updateMyMetricsOrSystem = new VmUpdateResult() { Result = "true" };
+
+        public static readonly VmMetricInfoResponse[] vmMetricInfoResponse =
+            new VmMetricInfoResponse[]
+            {
+                new VmMetricInfoResponse()
+                {
+                    Value = 65056,
+                    Delta = 0,
+                    DeltaPercent = 0,
+                    DeltaStatus = BlMetricsStatus.normal,
+                    Date = new DateTime(2020, 6, 26)
+                },
+                new VmMetricInfoResponse()
+                {
+                    Value = 65000,
+                    Delta = -56,
+                    DeltaPercent = -0.6,
+                    DeltaStatus = BlMetricsStatus.warning,
+                    Date = new DateTime(2020, 6, 20)
+                }
             };
     }
 }

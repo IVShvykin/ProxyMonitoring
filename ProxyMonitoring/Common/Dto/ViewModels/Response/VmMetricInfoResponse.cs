@@ -1,9 +1,9 @@
 ﻿using Common.Dto.Enums;
 using System;
 
-namespace Common.Dto.ViewModels.SubModels
+namespace Common.Dto.ViewModels.Response
 {
-    public class VmMetricPoint
+    public class VmMetricInfoResponse
     {
         public long Value { get; set; }
         public long Delta { get; set; }
