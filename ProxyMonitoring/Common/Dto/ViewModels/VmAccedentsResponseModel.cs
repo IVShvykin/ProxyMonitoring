@@ -13,5 +13,6 @@ namespace Common.Dto.ViewModels
         public string Description { get; set; }
         public string[] AffectedSystems { get; set; }
         public DateTime DetectionDate { get; set; }
+        public string Status { get; set; }
     }
 }
