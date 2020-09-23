@@ -2,7 +2,7 @@
 {
     public class VmAccedentWorkersResponseModel
     {
-        public VmWorker Manager { get; set; }
+        public VmManager Manager { get; set; }
         public VmWorker[] Workers { get; set; }
     }
 }

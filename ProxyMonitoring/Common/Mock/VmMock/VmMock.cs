@@ -50,5 +50,37 @@ namespace Common.Mock.VmMock
                     DetectionDate =new DateTime(2020,6,26) // Дата выявления *
                 }
             };
+
+        public static readonly VmAccedentWorkersResponseModel vmAccedentWorkersResponseModels =
+            new VmAccedentWorkersResponseModel
+            {
+                Manager = new VmManager()
+                {
+                    Name = "Иванов К.А.", // Имя менеджера *
+                    Avatar = "https://www.nj.com/resizer/h8MrN0-Nw5dB5FOmMVGMmfVKFJo=/450x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/SJGKVE5UNVESVCW7BBOHKQCZVE.jpg", // Ссылка на аватар менеджера *
+                    Role = "Начальник управления УАБД ДРИ" // Роль менеджера *}
+                },
+                Workers = new VmWorker[]
+                {
+                    new VmWorker()
+                    {
+                        Name = "Соколов А. А.", // Имя участника *
+                        Status = BlWorkerStatus.joined, // Статус участника joined/ready/pending *
+                        Role = "Департамент развития инфрастуктуры", // Роль участника *
+                    },
+                    new VmWorker()
+                    {
+                        Name = "Иванов А. А.", // Имя участника *
+                        Status = BlWorkerStatus.pending, // Статус участника joined/ready/pending *
+                        Role = "Департамент развития инфрастуктуры", // Роль участника *
+                    },
+                    new VmWorker()
+                    {
+                        Name = "Сидоров А. А.", // Имя участника *
+                        Status = BlWorkerStatus.ready, // Статус участника joined/ready/pending *
+                        Role = "Департамент развития инфрастуктуры", // Роль участника *
+                    }
+                }
+            };
     }
 }
