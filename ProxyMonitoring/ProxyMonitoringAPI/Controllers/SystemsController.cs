@@ -22,5 +22,11 @@ namespace ProxyMobileMonitoringAPI.Controllers
         {
             return vmMock.affectedSystems;
         }
+
+        [HttpPost("updateMySystems")]
+        public async Task<VmUpdateResponse> UpdateMySystems([FromBody] string[] mySistems)
+        {
+            return vmMock.updateMyMetricsOrSystem;
+        }
     }
 }
