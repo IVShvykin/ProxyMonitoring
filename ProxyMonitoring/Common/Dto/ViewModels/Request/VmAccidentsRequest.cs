@@ -2,7 +2,7 @@
 
 namespace Common.Dto.ViewModels.Request
 {
-    public class VmAccidentsRequest : VmPageRequestBasel
+    public class VmAccidentsRequest : VmPageRequestBase
     {
         public DateTime? StartDate { get; set; }
         public string[] AffectedSystems { get; set; }
