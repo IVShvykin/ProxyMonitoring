@@ -3,7 +3,7 @@ using Common.Dto.Enums;
 
 namespace Common.Dto.ViewModels.Response
 {
-    public class VmAccedentInfoResponse
+    public class VmAccidentInfoResponse
     {
         public string Id { get; set; }
         public string Name { get; set; }

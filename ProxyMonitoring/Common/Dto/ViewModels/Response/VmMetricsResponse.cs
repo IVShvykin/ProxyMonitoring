@@ -4,7 +4,7 @@ namespace Common.Dto.ViewModels.Response
 {
     public class VmMetricsResponse
     {
-        public long Id { get; set; }
+        public string Id { get; set; }
         public string Name { get; set; }
         public bool Mine { get; set; }
         public string Value { get; set; }

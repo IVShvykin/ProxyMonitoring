@@ -2,7 +2,7 @@
 
 namespace Common.Dto.ViewModels.Response
 {
-    public class VmAccedentHistoryResponse
+    public class VmAccidentHistoryResponse
     {
         public VmHistoryRecord[] CompletedHistory { get; set; }
         public VmHistoryRecord[] PlanHistory { get; set; }
