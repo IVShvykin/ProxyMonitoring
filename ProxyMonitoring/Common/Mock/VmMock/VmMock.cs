@@ -83,7 +83,7 @@ namespace Common.Mock.VmMock
                 }
             };
 
-        public static readonly VmAccidentDescriptionResponseModel[] vmAccidentDescriptionResponseModel = 
+        public static readonly VmAccidentDescriptionResponseModel[] vmAccidentDescriptionResponseModel =
             new VmAccidentDescriptionResponseModel[]
             {
                 new VmAccidentDescriptionResponseModel()
@@ -92,9 +92,26 @@ namespace Common.Mock.VmMock
                     Value = "Выявлена недоступность АБС М-Банк, инстанс main. Последствия — в ВТБ Онлайн профиль клиентов, имеющих продукты экс-БМ собираются из кэш. Во время сбоя в ВТБ-онлайн было невозможно проведение операций по части ранее выпущенных карт (только бывшего Банка Москвы)." // Текст описания *
                 },
                 new VmAccidentDescriptionResponseModel()
-                { 
+                {
                     Name = "Для СМИ",
                     Value = "Ранее зафиксированные проблемы в ВТБ-Онлайн полностью устранены, работа мобильного приложения восстановлена.\nРанее в системе наблюдался кратковременный технический сбой, в ходе которого в адрес клиентов произошла выгрузка ошибочных СМС о ранее проведённых архивных транзакциях, однако никаких списаний денежных средств не производилось.\nПриносим свои извинения за неудобства, наши IT специалисты делают все возможное для усовершенствования онлайн-сервисов."
+                }
+            };
+
+        public static readonly VmAccidentEventResponseModel[] vmAccidentEventResponseModel =
+            new VmAccidentEventResponseModel[]
+            {
+                new VmAccidentEventResponseModel()
+                {
+                    Id = "1", // Идентификатор аварии
+                    Date = new DateTime(2020, 6, 26),// Дата аварии
+                    Type = BlWorkType.accident, //Тип аварии
+                },
+                new VmAccidentEventResponseModel()
+                {
+                    Id = "2", // Идентификатор аварии
+                    Date = new DateTime(2020, 7, 20),// Дата аварии
+                    Type = BlWorkType.plan, //Тип аварии
                 }
             };
     }
