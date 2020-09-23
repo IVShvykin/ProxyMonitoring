@@ -29,6 +29,7 @@ namespace ProxySmMonitoringAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddApiVersioning();
             services.AddSwaggerGen();
             services.AddCommonBase();
             services.AddMapping();
