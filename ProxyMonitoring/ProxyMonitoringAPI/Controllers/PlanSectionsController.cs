@@ -10,10 +10,10 @@ namespace ProxyMobileMonitoringAPI.Controllers
     [ApiVersion("1.0")]
     [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
     [Route("api/v{version:apiVersion}/[controller]")]
-    public class PlansController : ControllerBase
+    public class PlanSectionsController : ControllerBase
     {
         [HttpGet]
-        public async Task<VmPlanSectionsResponse[]> PlanSections([FromQuery] VmPlanSectionRequest vmPlanSectionRequest)
+        public async Task<VmPlanSectionsResponse[]> Get([FromQuery] VmPlanSectionRequest vmPlanSectionRequest)
         {
             return VmMock.vmPlanSectionsResponse;
         }
