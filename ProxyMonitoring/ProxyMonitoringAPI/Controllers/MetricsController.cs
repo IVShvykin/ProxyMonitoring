@@ -18,10 +18,10 @@ namespace ProxyMobileMonitoringAPI.Controllers
             return vmMock.vmMetricsResponse;
         }
 
-        [HttpPost("updateMyMetrics")]
-        public async Task<VmUpdateResponse> UpdateMyMetrics([FromBody] string[] vmUpdateRequest)
+        [HttpPost("update")]
+        public async Task<VmUpdateResponse> UpdateMetrics([FromBody] string[] vmUpdateRequest)
         {
-            return vmMock.updateMyMetricsOrSystem;
+            return vmMock.updateMetricsOrSystem;
         }
 
         [HttpGet("info")]

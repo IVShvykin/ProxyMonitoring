@@ -236,7 +236,7 @@ namespace Common.Mock.VmMock
             "Service Manager"
         };
 
-        public static readonly VmUpdateResponse updateMyMetricsOrSystem = new VmUpdateResponse() { Result = "true" };
+        public static readonly VmUpdateResponse updateMetricsOrSystem = new VmUpdateResponse() { Result = "true" };
 
         public static readonly VmMetricInfoResponse[] vmMetricInfoResponse =
             new VmMetricInfoResponse[]
