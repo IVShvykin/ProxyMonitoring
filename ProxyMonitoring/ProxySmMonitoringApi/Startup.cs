@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Common;
+using System.Text.Json;
 
 namespace ProxySmMonitoringAPI
 {
@@ -28,7 +29,11 @@ namespace ProxySmMonitoringAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+                });
             services.AddApiVersioning();
             services.AddSwaggerGen();
             services.AddCommonBase();
