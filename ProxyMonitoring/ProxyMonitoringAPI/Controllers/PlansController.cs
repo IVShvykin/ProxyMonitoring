@@ -12,14 +12,14 @@ namespace ProxyMobileMonitoringAPI.Controllers
     [Route("api/v{version:apiVersion}/[controller]")]
     public class PlansController : ControllerBase
     {
-        [HttpGet("sections")]
-        public async Task<VmPlanSectionsResponse[]> GetPlanSections([FromQuery] VmPlanSectionRequest vmPlanSectionRequest)
+        [HttpPost("sections")]
+        public async Task<VmPlanSectionsResponse[]> GetPlanSections([FromBody] VmPlanSectionRequest vmPlanSectionRequest)
         {
             return VmMock.vmPlanSectionsResponse;
         }
 
-        [HttpGet]
-        public async Task<VmPlanResponse[]> Get([FromQuery] VmPlanRequest vmPlanRequest)
+        [HttpPost]
+        public async Task<VmPlanResponse[]> Get([FromBody] VmPlanRequest vmPlanRequest)
         {
             return VmMock.vmPlanResponse;
         }

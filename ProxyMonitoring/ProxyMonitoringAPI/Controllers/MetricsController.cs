@@ -12,8 +12,8 @@ namespace ProxyMobileMonitoringAPI.Controllers
     [Route("api/v{version:apiVersion}/[controller]")]
     public class MetricsController : ControllerBase
     {
-        [HttpGet]
-        public async Task<VmMetricsResponse[]> Get([FromQuery] VmMetricInfoRequest vmMetricInfoRequest)
+        [HttpPost]
+        public async Task<VmMetricsResponse[]> Get([FromBody] VmMetricInfoRequest vmMetricInfoRequest)
         {
             return vmMock.vmMetricsResponse;
         }
@@ -24,8 +24,8 @@ namespace ProxyMobileMonitoringAPI.Controllers
             return vmMock.updateMetricsOrSystem;
         }
 
-        [HttpGet("info")]
-        public async Task<VmMetricInfoResponse[]> GetMetricInfo([FromQuery] VmMetricInfoRequest vmMetricInfoRequest)
+        [HttpPost("info")]
+        public async Task<VmMetricInfoResponse[]> GetMetricInfo([FromBody] VmMetricInfoRequest vmMetricInfoRequest)
         {
             return vmMock.vmMetricInfoResponse;
         }

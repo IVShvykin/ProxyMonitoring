@@ -12,8 +12,8 @@ namespace ProxyMobileMonitoringAPI.Controllers
     [Route("api/v{version:apiVersion}/[controller]")]
     public class AccidentsController : ControllerBase
     {
-        [HttpGet]
-        public async Task<VmAccidentResponse[]> Get([FromQuery] VmAccidentsRequest vmAccidentsRequest)
+        [HttpPost]
+        public async Task<VmAccidentResponse[]> Get([FromBody] VmAccidentsRequest vmAccidentsRequest)
         {
             return VmMock.vmAccidentResponse;
         }
