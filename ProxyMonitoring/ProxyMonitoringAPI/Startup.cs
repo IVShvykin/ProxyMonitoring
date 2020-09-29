@@ -41,7 +41,12 @@ namespace ProxyMonitoringAPI
             {
                 options.InvalidModelStateResponseFactory = context =>
                 {
-                    var result = new JsonResult(new VmErrorResponse { RequestCode = "401", ErrorMessage = $"{context.ModelState.Values.First().Errors.First().ErrorMessage}" });
+                    var result = new JsonResult(
+                        new VmErrorResponse 
+                        { 
+                            RequestCode = context.HttpContext.TraceIdentifier, 
+                            ErrorMessage = $"{context.ModelState.Values.First().Errors.First().ErrorMessage}"
+                        });
                     return result;
                 };
             })
