@@ -6,6 +6,9 @@ using Microsoft.Extensions.Hosting;
 using Common;
 using Common.Helpers.DateTimeBinder;
 using System.Text.Json;
+using Microsoft.AspNetCore.Mvc;
+using Common.Dto.ViewModels.Response;
+using System.Linq;
 
 namespace ProxyMonitoringAPI
 {
@@ -33,6 +36,14 @@ namespace ProxyMonitoringAPI
             services.AddControllers(options =>
             {
                 options.ModelBinderProviders.Insert(0, new DateTimeModelBinderProvider());
+            })
+            .ConfigureApiBehaviorOptions(options =>
+            {
+                options.InvalidModelStateResponseFactory = context =>
+                {
+                    var result = new JsonResult(new VmErrorResponse { RequestCode = "401", ErrorMessage = $"{context.ModelState.Values.First().Errors.First().ErrorMessage}" });
+                    return result;
+                };
             })
             .AddJsonOptions(options =>
             {
