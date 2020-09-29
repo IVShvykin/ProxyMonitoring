@@ -47,7 +47,7 @@ namespace Common.Mock.VmMock
                     new VmHistoryRecord()
                     {
                         Name = "Соколов А. А.",
-                        FinishDate = new DateTime(2020, 6, 26),
+                        FinishDate = new DateTime(2020, 6, 26).ToUniversalTime(),
                         Description = "Описание работы"
                     }
                 },
@@ -56,7 +56,7 @@ namespace Common.Mock.VmMock
                     new VmHistoryRecord()
                     {
                         Name = "Иванов И. И.",
-                        FinishDate = new DateTime(2020, 7, 15),
+                        FinishDate = new DateTime(2020, 7, 15).ToUniversalTime(),
                         Description = "Описание другой работы"
                     }
                 },
@@ -76,9 +76,9 @@ namespace Common.Mock.VmMock
                 FailurePoint = "М-Банк", // Точка сбоя *
                 ConfigurationUnit = "М-Банк", // Конфигурационная единица *
                 AffectedSystems = new string[] { "Платежи", "Переводы" },// Затронутые системы *
-                StartDate = new DateTime(2020, 6, 26), // Дата начала *
-                DetectionDate = new DateTime(2020, 7, 20), // Дата выявления *
-                PredictDate = new DateTime(2020, 6, 21), // Прогнозируемая дата завершения *
+                StartDate = new DateTime(2020, 6, 26).ToUniversalTime(), // Дата начала *
+                DetectionDate = new DateTime(2020, 7, 20).ToUniversalTime(), // Дата выявления *
+                PredictDate = new DateTime(2020, 6, 21).ToUniversalTime(), // Прогнозируемая дата завершения *
                 ConferenceLink = "https://bankvtb.webex.com/meet/xxx", // Ссылка на конференцию (Webex) *
                 TelegramLink = "https://t.me/vtb" // Ссылка на Telegram-чат *
             };
@@ -96,7 +96,7 @@ namespace Common.Mock.VmMock
                     StatusType = BlAccidentStatusType.warning, // Тип статуса аварии critical/warning/normal *
                     Description = "Описание", // Описание аварии *
                     AffectedSystems = new string[] { "Платежи","Переводы" },// Затронутые системы * 
-                    DetectionDate =new DateTime(2020,6,26) // Дата выявления *
+                    DetectionDate =new DateTime(2020,6,26).ToUniversalTime() // Дата выявления *
                 }
             };
 
@@ -247,7 +247,7 @@ namespace Common.Mock.VmMock
                     Delta = 0,
                     DeltaPercent = 0,
                     DeltaStatus = BlMetricsStatus.normal,
-                    Date = new DateTime(2020, 6, 26)
+                    Date = new DateTime(2020, 6, 26).ToUniversalTime()
                 },
                 new VmMetricInfoResponse()
                 {
@@ -255,7 +255,32 @@ namespace Common.Mock.VmMock
                     Delta = -56,
                     DeltaPercent = -0.6,
                     DeltaStatus = BlMetricsStatus.warning,
-                    Date = new DateTime(2020, 6, 20)
+                    Date = new DateTime(2020, 6, 20).ToUniversalTime()
+                }
+            };
+
+        public static readonly VmPlanResponse[] vmPlanResponse =
+            new VmPlanResponse[]
+            {
+                new VmPlanResponse()
+                {
+                    Id = "1",
+                    Name = "Изменение IM-283501",
+                    Status = "Согласование",
+                    StatusType = BlAccidentStatusType.warning,
+                    Description = "Описание",
+                    AffectedSystems = new string[]{ "Платежи", "Переводы" },
+                    StartDate = new DateTime(2020, 6, 26).ToUniversalTime()
+                },
+                new VmPlanResponse()
+                {
+                    Id = "2",
+                    Name = "Изменение IM-283501",
+                    Status = "Выполнено",
+                    StatusType = BlAccidentStatusType.normal,
+                    Description = "Описание",
+                    AffectedSystems = new string[]{ "Платежи" },
+                    StartDate = new DateTime(2020, 7, 27).ToUniversalTime()
                 }
             };
     }
