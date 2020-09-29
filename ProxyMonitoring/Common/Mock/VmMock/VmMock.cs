@@ -283,5 +283,78 @@ namespace Common.Mock.VmMock
                     StartDate = new DateTime(2020, 7, 27).ToUniversalTime()
                 }
             };
+
+        public static readonly VmPlanInfoResponse vmPlanInfoResponse =
+            new VmPlanInfoResponse()
+            {
+                Id = "10",
+                Name = "Изменение IM-283501",
+                Status = "Согласование",
+                StatusType = BlPlanStatus.warning,
+                Description = "Описание",
+                ImpactDescription = "Описание последствий",
+                DegradationRate = "Не влияет",
+                ConfigurationUnit = "М-Банк",
+                AffectedSystems = new string[] { "Платежи", "Переводы" },
+                StartDate = new DateTime(2020, 6, 26).ToUniversalTime(),
+                FinishDate = new DateTime(2020, 7, 27).ToUniversalTime(),
+                StartDownDate = new DateTime(2020, 8, 30).ToUniversalTime(),
+                FinishDownDate = new DateTime(2020, 9, 30).ToUniversalTime()
+            };
+
+        public static readonly VmPlanWorkers vmPlanWorkers =
+                new VmPlanWorkers
+                {
+                    Manager = new VmManager()
+                    {
+                        Name = "Иванов К.А.", // Имя менеджера *
+                        Avatar = "https://www.nj.com/resizer/h8MrN0-Nw5dB5FOmMVGMmfVKFJo=/450x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/SJGKVE5UNVESVCW7BBOHKQCZVE.jpg", // Ссылка на аватар менеджера *
+                        Role = "Начальник управления УАБД ДРИ" // Роль менеджера *}
+                    },
+                    Workers = new VmWorker[]
+                    {
+                                new VmWorker()
+                                {
+                                    Name = "Соколов А. А.", // Имя участника *
+                                    Status = BlWorkerStatus.joined, // Статус участника joined/ready/pending *
+                                    Role = "Департамент развития инфрастуктуры", // Роль участника *
+                                },
+                                new VmWorker()
+                                {
+                                    Name = "Иванов А. А.", // Имя участника *
+                                    Status = BlWorkerStatus.pending, // Статус участника joined/ready/pending *
+                                    Role = "Департамент развития инфрастуктуры", // Роль участника *
+                                },
+                                new VmWorker()
+                                {
+                                    Name = "Сидоров А. А.", // Имя участника *
+                                    Status = BlWorkerStatus.ready, // Статус участника joined/ready/pending *
+                                    Role = "Департамент развития инфрастуктуры", // Роль участника *
+                                }
+                    }
+                };
+
+        public static readonly VmPlanHistoryResponse vmPlanHistoryResponse =
+            new VmPlanHistoryResponse()
+            {
+                CompletedHistory = new VmHistoryRecord[]
+                {
+                            new VmHistoryRecord()
+                            {
+                                Name = "Соколов А. А.",
+                                FinishDate = new DateTime(2020, 6, 26).ToUniversalTime(),
+                                Description = "Описание работы"
+                            }
+                },
+                PlanHistory = new VmHistoryRecord[]
+                {
+                            new VmHistoryRecord()
+                            {
+                                Name = "Иванов И. И.",
+                                FinishDate = new DateTime(2020, 7, 15).ToUniversalTime(),
+                                Description = "Описание другой работы"
+                            }
+                },
+            };
     }
 }

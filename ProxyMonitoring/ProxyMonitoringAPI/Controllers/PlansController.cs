@@ -13,7 +13,7 @@ namespace ProxyMobileMonitoringAPI.Controllers
     public class PlansController : ControllerBase
     {
         [HttpGet("sections")]
-        public async Task<VmPlanSectionsResponse[]> GetSections([FromQuery] VmPlanSectionRequest vmPlanSectionRequest)
+        public async Task<VmPlanSectionsResponse[]> GetPlanSections([FromQuery] VmPlanSectionRequest vmPlanSectionRequest)
         {
             return VmMock.vmPlanSectionsResponse;
         }
@@ -22,6 +22,24 @@ namespace ProxyMobileMonitoringAPI.Controllers
         public async Task<VmPlanResponse[]> Get([FromQuery] VmPlanRequest vmPlanRequest)
         {
             return VmMock.vmPlanResponse;
+        }
+
+        [HttpGet("info")]
+        public async Task<VmPlanInfoResponse> GetPlanInfo(string id)
+        {
+            return VmMock.vmPlanInfoResponse;
+        }
+
+        [HttpGet("workers")]
+        public async Task<VmPlanWorkers> GetPlanWorkers(string id)
+        {
+            return VmMock.vmPlanWorkers;
+        }
+
+        [HttpGet("history")]
+        public async Task<VmPlanHistoryResponse> GetPlanHistory(string id)
+        {
+            return VmMock.vmPlanHistoryResponse;
         }
     }
 }
