@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
-using Common.Dto.ViewModels.Request;
+﻿using Common.Dto.ViewModels.Request;
 using Common.Dto.ViewModels.Response;
 using Common.Mock.VmMock;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ProxyMobileMonitoringAPI.Controllers
