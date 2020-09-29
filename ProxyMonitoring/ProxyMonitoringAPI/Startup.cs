@@ -4,6 +4,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Common;
+using Common.Helpers.DateTimeBinder;
+using System.Text.Json;
 
 namespace ProxyMonitoringAPI
 {
@@ -28,7 +30,14 @@ namespace ProxyMonitoringAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers(options =>
+            {
+                options.ModelBinderProviders.Insert(0, new DateTimeModelBinderProvider());
+            })
+            .AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+            });
             services.AddApiVersioning();
             services.AddSwaggerGen();
             services.AddCommonBase();
@@ -40,7 +49,8 @@ namespace ProxyMonitoringAPI
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                app.UseExceptionHandler("/system/error");
+                //app.UseDeveloperExceptionPage();
             }
 
             app.UseSwagger();
@@ -50,7 +60,6 @@ namespace ProxyMonitoringAPI
                 c.SwaggerEndpoint("./swagger/v1/swagger.json", "V1");
                 c.RoutePrefix = string.Empty;
             });
-
 
             //app.UseHttpsRedirection();
 
