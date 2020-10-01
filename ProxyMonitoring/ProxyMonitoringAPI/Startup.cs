@@ -3,12 +3,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Linq;
 using Common;
 using Common.Helpers.DateTimeBinder;
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using Common.Dto.ViewModels.Response;
-using System.Linq;
 
 namespace ProxyMonitoringAPI
 {
@@ -57,6 +57,7 @@ namespace ProxyMonitoringAPI
             services.AddApiVersioning();
             services.AddSwaggerGen();
             services.AddCommonBase();
+            services.AddRouting(options => options.LowercaseUrls = true);
             services.AddMapping();
         }
 
