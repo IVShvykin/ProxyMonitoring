@@ -90,7 +90,6 @@ namespace Common.Mock.VmMock
                 {
                     Id = "1", // Идентификатор аварии *
                     Name = "Авария IM-216836", // Имя аварии *
-                    Type = BlWorkType.accident, // Тип авария или плановая работа accident/plan *
                     Category = 10, // Категория аварии *
                     Status = "Устранение последствий", // Статус аварии *
                     StatusType = BlAccidentStatusType.warning, // Тип статуса аварии critical/warning/normal *
@@ -98,6 +97,13 @@ namespace Common.Mock.VmMock
                     AffectedSystems = new string[] { "Платежи","Переводы" },// Затронутые системы * 
                     DetectionDate =new DateTime(2020,6,26).ToUniversalTime() // Дата выявления *
                 }
+            };
+
+        public static readonly VmNewAccidentResponse vmNewAccidentResponse =
+            new VmNewAccidentResponse()
+            {
+                Id = "1",
+                Name = "Авария IM-216836"
             };
 
         public static readonly VmAccidentWorkersResponse vmAccidentWorkersResponse =
