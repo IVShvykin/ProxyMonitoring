@@ -44,7 +44,7 @@ namespace ProxyMobileMonitoringAPI.Controllers
         }
 
         [HttpGet("workers")]
-        public async Task<VmAccidentWorkersResponse> AccidentWorkers([FromQuery] string id)
+        public async Task<VmAccidentWorkersResponse> AccidentWorkers([FromQuery][Required] string id)
         {
             return VmMock.vmAccidentWorkersResponse;
         }
