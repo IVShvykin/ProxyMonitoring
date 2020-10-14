@@ -3,6 +3,7 @@ using Common.Dto.ViewModels.Response;
 using Common.Mock.VmMock;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProxyMobileMonitoringAPI.Controllers
 {
@@ -25,21 +26,27 @@ namespace ProxyMobileMonitoringAPI.Controllers
         }
 
         [HttpGet("info")]
-        public async Task<VmPlanInfoResponse> GetPlanInfo(string id)
+        public async Task<VmPlanInfoResponse> GetPlanInfo([FromQuery][Required] string id)
         {
             return VmMock.vmPlanInfoResponse;
         }
 
         [HttpGet("workers")]
-        public async Task<VmPlanWorkers> GetPlanWorkers(string id)
+        public async Task<VmPlanWorkers> GetPlanWorkers([FromQuery][Required] string id)
         {
             return VmMock.vmPlanWorkers;
         }
 
         [HttpGet("history")]
-        public async Task<VmPlanHistoryResponse> GetPlanHistory(string id)
+        public async Task<VmPlanHistoryResponse> GetPlanHistory([FromQuery][Required] string id)
         {
             return VmMock.vmPlanHistoryResponse;
+        }
+
+        [HttpGet("descriptions")]
+        public async Task<VmPlanDescriptionResponse[]> AccidentDescriptions([FromQuery][Required] string id)
+        {
+            return VmMock.vmPlanDescriptionResponse;
         }
     }
 }
