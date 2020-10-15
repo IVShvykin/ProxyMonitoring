@@ -91,7 +91,7 @@ namespace Common.Mock.VmMock
                 ConfigurationUnit = "М-Банк", // Конфигурационная единица *
                 AffectedSystems = new string[] { "Платежи", "Переводы" },// Затронутые системы *
                 StartDate = new DateTime(2020, 6, 26).ToUniversalTime(), // Дата начала *
-                DetectionDate = new DateTime(2020, 7, 20).ToUniversalTime(), // Дата выявления *
+                DetectionDate = new DateTime(2020, 6, 20).ToUniversalTime(), // Дата выявления *
                 PredictDate = new DateTime(2020, 6, 21).ToUniversalTime(), // Прогнозируемая дата завершения *
                 ConferenceLink = "https://bankvtb.webex.com/meet/xxx", // Ссылка на конференцию (Webex) *
                 TelegramLink = "https://t.me/vtb" // Ссылка на Telegram-чат *
@@ -322,8 +322,8 @@ namespace Common.Mock.VmMock
                 FinishDownDate = new DateTime(2020, 9, 30).ToUniversalTime()
             };
 
-        public static readonly VmPlanWorkers vmPlanWorkers =
-                new VmPlanWorkers
+        public static readonly VmPlanWorkersResponse vmPlanWorkers =
+                new VmPlanWorkersResponse
                 {
                     Manager = new VmManager()
                     {

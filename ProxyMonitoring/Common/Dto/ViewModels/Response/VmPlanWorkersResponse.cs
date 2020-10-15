@@ -2,7 +2,7 @@
 
 namespace Common.Dto.ViewModels.Response
 {
-    public class VmPlanWorkers
+    public class VmPlanWorkersResponse
     {
         public VmManager Manager { get; set; }
         public VmWorker[] Workers { get; set; }
