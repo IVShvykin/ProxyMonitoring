@@ -32,7 +32,7 @@ namespace ProxyMobileMonitoringAPI.Controllers
         }
 
         [HttpGet("workers")]
-        public async Task<VmPlanWorkers> GetPlanWorkers([FromQuery][Required] string id)
+        public async Task<VmPlanWorkersResponse> GetPlanWorkers([FromQuery][Required] string id)
         {
             return VmMock.vmPlanWorkers;
         }
